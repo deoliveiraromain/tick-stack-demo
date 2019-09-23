@@ -7,15 +7,15 @@ services:
     volumes:
     - ./etc/telegraf.conf:/etc/telegraf/telegraf.conf:ro
     - /var/run/docker.sock:/var/run/docker.sock
-    - /sys:/rootfs/sys:ro
-    - /proc:/rootfs/proc:ro
-    - /etc:/rootfs/etc:ro
-    environment:
-       HOST_PROC: /rootfs/proc
-       HOST_SYS: /rootfs/sys
-       HOST_ETC: /rootfs/etc
-    depends_on:
-    - influxdb
+#    - /sys:/rootfs/sys:ro
+#    - /proc:/rootfs/proc:ro
+#    - /etc:/rootfs/etc:ro
+#    environment:
+#       HOST_PROC: /rootfs/proc
+#       HOST_SYS: /rootfs/sys
+#       HOST_ETC: /rootfs/etc
+  #  depends_on:
+   # - influxdb
     ports:
     - "8092:8092/udp"
     - "8094:8094"
